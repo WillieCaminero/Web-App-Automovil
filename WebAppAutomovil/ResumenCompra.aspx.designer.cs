@@ -112,6 +112,51 @@ namespace WebAppAutomovil {
         protected global::System.Web.UI.WebControls.Label lblMetodoPago;
         
         /// <summary>
+        /// pnlTarjetaCredito control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlTarjetaCredito;
+        
+        /// <summary>
+        /// lblTarjetaCredito control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTarjetaCredito;
+        
+        /// <summary>
+        /// lblAnioTarjeta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAnioTarjeta;
+        
+        /// <summary>
+        /// lblMesTarjeta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMesTarjeta;
+        
+        /// <summary>
+        /// lblCVVTarjeta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCVVTarjeta;
+        
+        /// <summary>
         /// lblDireccion control.
         /// </summary>
         /// <remarks>

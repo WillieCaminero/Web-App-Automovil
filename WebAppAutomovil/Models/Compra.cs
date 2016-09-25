@@ -12,6 +12,7 @@ namespace WebAppAutomovil.Models
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
         public string MetodoPago { get; set; }
+        public TarjetaCredito TarjetaCredito { get; set; }
         public string Direccion { get; set; }
     }
 }

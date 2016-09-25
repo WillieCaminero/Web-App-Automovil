@@ -54,6 +54,15 @@ namespace WebAppAutomovil
             lblNombreCompleto.Text = compra.Nombres + " " + compra.Apellidos;
             lblMetodoPago.Text = compra.MetodoPago;
             lblDireccion.Text = compra.Direccion;
+
+            if (compra.TarjetaCredito != null)
+            {
+                lblTarjetaCredito.Text = compra.TarjetaCredito.CodigoTarjeta;
+                lblMesTarjeta.Text = compra.TarjetaCredito.Mes;
+                lblAnioTarjeta.Text = compra.TarjetaCredito.Anio;
+                lblCVVTarjeta.Text = compra.TarjetaCredito.CVV;
+                pnlTarjetaCredito.Visible = true;
+            }
         }
     }
 }

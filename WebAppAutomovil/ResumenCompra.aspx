@@ -49,6 +49,12 @@
                               <div class="panel-footer">
                                   <strong>Nombre Completo:</strong> <asp:Label ID="lblNombreCompleto" runat="server"></asp:Label> <br/>
                                   <strong>Método de Pago:</strong> <asp:Label ID="lblMetodoPago" runat="server"></asp:Label> <br/>
+                                  <asp:Panel ID="pnlTarjetaCredito" runat="server" Visible="false">
+                                      <strong>Tarjeta de Crédito:</strong> <asp:Label ID="lblTarjetaCredito" runat="server"></asp:Label> 
+                                      <strong>Año:</strong> <asp:Label ID="lblAnioTarjeta" runat="server"></asp:Label> 
+                                      <strong>Mes:</strong> <asp:Label ID="lblMesTarjeta" runat="server"></asp:Label> 
+                                      <strong>CVV:</strong> <asp:Label ID="lblCVVTarjeta" runat="server"></asp:Label> <br/>
+                                  </asp:Panel>
                                   <strong>Dirección:</strong> <asp:Label ID="lblDireccion" runat="server"></asp:Label> <br/>
                               </div>
                             </div>
