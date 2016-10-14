@@ -15,6 +15,9 @@ c:\users\williemanuel\documents\visual studio 2015\Projects\WebAppAutomovil\WebA
 c:\users\williemanuel\documents\visual studio 2015\Projects\WebAppAutomovil\WebAppAutomovil\bin\WebAppAutomovil.pdb
 c:\users\williemanuel\documents\visual studio 2015\Projects\WebAppAutomovil\WebAppAutomovil\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 c:\users\williemanuel\documents\visual studio 2015\Projects\WebAppAutomovil\WebAppAutomovil\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-c:\users\williemanuel\documents\visual studio 2015\Projects\WebAppAutomovil\WebAppAutomovil\obj\Debug\WebAppAutomovil.csprojResolveAssemblyReference.cache
 c:\users\williemanuel\documents\visual studio 2015\Projects\WebAppAutomovil\WebAppAutomovil\obj\Debug\WebAppAutomovil.dll
 c:\users\williemanuel\documents\visual studio 2015\Projects\WebAppAutomovil\WebAppAutomovil\obj\Debug\WebAppAutomovil.pdb
+C:\Users\WillieManuel\documents\visual studio 2015\Projects\WebAppAutomovil\WebAppAutomovil\bin\Newtonsoft.Json.dll
+C:\Users\WillieManuel\documents\visual studio 2015\Projects\WebAppAutomovil\WebAppAutomovil\bin\Newtonsoft.Json.xml
+C:\Users\WillieManuel\documents\visual studio 2015\Projects\WebAppAutomovil\WebAppAutomovil\bin\AjaxControlToolkit.dll
+C:\Users\WillieManuel\documents\visual studio 2015\Projects\WebAppAutomovil\WebAppAutomovil\obj\Debug\WebAppAutomovil.csprojResolveAssemblyReference.cache

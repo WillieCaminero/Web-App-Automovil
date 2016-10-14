@@ -43,11 +43,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=16.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.16.1.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -66,13 +74,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Log.aspx" />
     <Content Include="packages.config" />
+    <Content Include="Resources\css\bootstrap-datetimepicker.min.css" />
     <Content Include="Resources\css\bootstrap-theme.min.css.map" />
     <Content Include="Resources\css\bootstrap.min.css.map" />
     <Content Include="Resources\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Resources\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Resources\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Resources\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Log\bitacora.dat" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -89,7 +101,13 @@
     <Content Include="Resources\css\bootstrap-theme.min.css" />
     <Content Include="Resources\css\bootstrap.min.css" />
     <Content Include="Resources\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Resources\img\calendar.png" />
+    <Content Include="Resources\img\foto1.jpg" />
+    <Content Include="Resources\img\foto2.jpg" />
+    <Content Include="Resources\js\bootstrap-datetimepicker.min.js" />
     <Content Include="Resources\js\bootstrap.min.js" />
+    <Content Include="Resources\js\jquery-1.8.3.min.js" />
+    <Content Include="Resources\js\locales\bootstrap-datetimepicker.es.js" />
     <Content Include="Resources\js\npm.js" />
     <Content Include="ResumenCompra.aspx" />
     <Content Include="Web.config" />
@@ -123,12 +141,27 @@
     <Compile Include="DatosUsuario.aspx.designer.cs">
       <DependentUpon>DatosUsuario.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Log.aspx.cs">
+      <DependentUpon>Log.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log.aspx.designer.cs">
+      <DependentUpon>Log.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\Accesorios.cs" />
     <Compile Include="Models\Automovil.cs" />
     <Compile Include="Models\Compra.cs" />
+    <Compile Include="Models\LogRecord.cs" />
     <Compile Include="Models\TarjetaCredito.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResumenCompra.aspx.cs">
@@ -138,6 +171,7 @@
     <Compile Include="ResumenCompra.aspx.designer.cs">
       <DependentUpon>ResumenCompra.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\FileLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

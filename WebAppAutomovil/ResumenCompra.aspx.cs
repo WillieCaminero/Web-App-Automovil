@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using WebAppAutomovil.Models;
+using WebAppAutomovil.Utilities;
 
 namespace WebAppAutomovil
 {
     public partial class ResumenCompra : System.Web.UI.Page
     {
+        private FileLog _log = new FileLog();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            Models.Compra compra = (Models.Compra)Session["Compra"];
+            Models.Compra compra = (Compra)Session["Compra"];
 
             if (!IsPostBack)
             {
@@ -24,12 +23,21 @@ namespace WebAppAutomovil
 
         protected void btnTerminarCompra_OnClick(object sender, EventArgs e)
         {
+            Models.Compra compra = (Compra)Session["Compra"];
+            LogRecord log = new LogRecord();
+
+            log.Id = _log.obtenerIdRecord();
+            log.Usuario = compra.Nombres + " " + compra.Apellidos;
+            log.Fecha = DateTime.Now;
+
+            _log.insertarRecordLog(log);
+
             Session["Automovil"] = null;
             Session["Accesorios"] = null;
             Session["CompraNueva"] = null;
             Session["Compra"] = null;
 
-            Response.Redirect("~/Automovil.aspx");
+            Response.Redirect("~/Default.aspx");
         }
 
         protected void btnPaginaAnterior_OnClick(object sender, EventArgs e)
@@ -64,5 +72,6 @@ namespace WebAppAutomovil
                 pnlTarjetaCredito.Visible = true;
             }
         }
+
     }
 }
