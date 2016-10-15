@@ -80,6 +80,7 @@
     <Content Include="Resources\css\bootstrap-datetimepicker.min.css" />
     <Content Include="Resources\css\bootstrap-theme.min.css.map" />
     <Content Include="Resources\css\bootstrap.min.css.map" />
+    <Content Include="Resources\css\styles.css" />
     <Content Include="Resources\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Resources\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Resources\fonts\glyphicons-halflings-regular.woff" />

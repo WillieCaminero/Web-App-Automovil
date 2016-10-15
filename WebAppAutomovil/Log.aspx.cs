@@ -29,8 +29,8 @@ namespace WebAppAutomovil
 
         protected void btnBuscar_OnClick(object sender, EventArgs e)
         {
-            DateTime fechaDesde = DateTime.Parse(dtp_FechaDesde.Value);
-            DateTime fechaHasta = DateTime.Parse(dtp_FechaHasta.Value);
+            DateTime fechaDesde = DateTime.Parse(txtFechaDesde.Text);
+            DateTime fechaHasta = DateTime.Parse(txtFechaHasta.Text);
 
             data = _log.obtenerRecords().Where((x) => x.Fecha >= fechaDesde).Where((x) => x.Fecha <= fechaHasta.AddDays(1)).ToList();
 
@@ -59,6 +59,11 @@ namespace WebAppAutomovil
             gvPrincipal.PageIndex = e.NewPageIndex;
             gvPrincipal.DataSource = data;
             gvPrincipal.DataBind();
+        }
+
+        protected void btnPaginaAnterior_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Default.aspx");
         }
     }
 }

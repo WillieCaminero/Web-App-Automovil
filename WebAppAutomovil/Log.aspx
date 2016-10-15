@@ -9,6 +9,7 @@
     <link href="Resources/css/bootstrap.min.css" rel="stylesheet" />
     <link href="Resources/css/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="Resources/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="Resources/css/styles.css" rel="stylesheet" />
 </head>
 <body>
  <form id="form1" runat="server">
@@ -22,8 +23,8 @@
                               <div class="panel-heading" style="padding-bottom:20px;">
                                 
                                 <div class="form-group col-md-5">
-                                    <div class="input-group date form_date" data-date="" data-date-format="dd-mm-yyyy" data-link-field="dtp_FechaDesde" data-link-format="dd-mm-yyyy">
-                                        <asp:TextBox ID="txtFechaDesde" runat="server" placeholder="Fecha Desde" CssClass="form-control" size="16" ReadOnly="true"></asp:TextBox>
+                                    <div class="input-group date form_date" data-date="" data-date-format="dd-mm-yyyy" data-link-field="<%=txtFechaDesde.ClientID %>" data-link-format="dd-mm-yyyy">
+                                        <input  placeholder="Fecha Desde" class="form-control" size="16" readonly="readonly" value="<%=txtFechaDesde.Text %>"/>
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
 					                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>   
                                     </div>                       
@@ -31,14 +32,16 @@
                                                                 ControlToValidate="txtFechaDesde"
                                                                 Display="Dynamic"
                                                                 ForeColor="Red"
+                                                                ValidationGroup="vgBuscar" 
                                                                 Width="100%">
                                                                     * Requerido
                                     </asp:RequiredFieldValidator>
-				                    <input type="hidden" id="dtp_FechaDesde" runat="server" value="" /><br/>
+                                    <asp:TextBox ID="txtFechaDesde" runat="server" style="display:none;"></asp:TextBox>
+                                        
                                 </div>
                                 <div class="form-group col-md-5">
-                                    <div class="input-group date form_date" data-date="" data-date-format="dd-mm-yyyy" data-link-field="dtp_FechaHasta" data-link-format="dd-mm-yyyy">
-                                        <asp:TextBox ID="txtFechaHasta" runat="server" placeholder="Fecha Desde" CssClass="form-control" size="16" ReadOnly="true"></asp:TextBox>
+                                    <div class="input-group date form_date" data-date="" data-date-format="dd-mm-yyyy" data-link-field="<%=txtFechaHasta.ClientID %>" data-link-format="dd-mm-yyyy">
+                                        <input  placeholder="Fecha Hasta" class="form-control" size="16" readonly="readonly" value="<%=txtFechaHasta.Text %>"/>
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
 					                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span> 
                                     </div>                         
@@ -46,25 +49,30 @@
                                                                 ControlToValidate="txtFechaHasta"
                                                                 Display="Dynamic"
                                                                 ForeColor="Red"
+                                                                ValidationGroup="vgBuscar" 
                                                                 Width="100%">
                                                                     * Requerido
                                     </asp:RequiredFieldValidator>
-				                    <input type="hidden" id="dtp_FechaHasta" runat="server" value="" /><br/>
+                                    <asp:TextBox ID="txtFechaHasta" runat="server" style="display:none;"></asp:TextBox>
                                 </div>
                                  
-                                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_OnClick" CssClass="btn btn-default"/>
+                                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_OnClick" ValidationGroup="vgBuscar" CssClass="btn btn-default"/>
                                 
                                </div>
                               <div class="panel-body">
-                                  <asp:GridView ID="gvPrincipal" runat="server" ShowHeaderWhenEmpty="true" AutoGenerateColumns="false" DataKeyNames="Id" 
-                                                AllowPaging="true" PageSize="10" OnPageIndexChanging ="gvPrincipal_PageIndexChanging" OnRowDeleting="gvPrincipal_RowDeleting">
+                                  <asp:GridView ID="gvPrincipal" runat="server" CssClass="table table-striped" ShowHeaderWhenEmpty="true" AutoGenerateColumns="false" DataKeyNames="Id" 
+                                                AllowPaging="true" PageSize="5"  OnPageIndexChanging ="gvPrincipal_PageIndexChanging" OnRowDeleting="gvPrincipal_RowDeleting">
                                     <Columns>
                                         <asp:BoundField DataField="Id" HeaderText="Código" />
                                         <asp:BoundField DataField="Usuario" HeaderText="Usuario Transacción" />
                                         <asp:BoundField DataField="Fecha" HeaderText="Fecha" />
                                         <asp:CommandField ShowDeleteButton="true" />
                                     </Columns>
+                                    <PagerStyle CssClass="pagination-ys" />
                                   </asp:GridView>
+                              </div>
+                              <div class="panel-footer">
+                                  <asp:Button ID="btnPaginaAnterior" runat="server" Text="Anterior" CssClass="btn btn-warning" OnClick="btnPaginaAnterior_OnClick"/>
                               </div>
                             </div>
                         </div>
